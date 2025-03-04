@@ -17,7 +17,7 @@ const map = new mapboxgl.Map({
 map.on('load', () => {
     map.addSource('fire-incident-data', {
         'type': 'geojson',
-        'url': "https://raw.githubusercontent.com/faizachwd/Lab3/Basic%20incidents%20details%202023%20onward%20-%204326.geojson"
+        'url': "https://github.com/faizachwd/Lab3/blob/c88931c2ef7daf6b6692d590e18a81faee94e8c8/Basic%20incidents%20details%202023%20onward%20-%204326.geojson"
     });
     map.addLayer({
         'id': 'fire-points',
