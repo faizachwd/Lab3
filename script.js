@@ -16,8 +16,8 @@ const map = new mapboxgl.Map({
 // // Add data source and draw initial visiualization of layer
 map.on('load', () => {
     map.addSource('fire-incident-data', {
-        'type': 'geojson',
-        'url': "https://raw.githubusercontent.com/faizachwd/Lab3/Basic%20incidents%20details%202023%20onward%20-%204326.geojson"
+        'type': 'vector',
+        'url': "mapbox://faiza132.at4sfay1"
     });
     map.addLayer({
         'id': 'fire-points',
@@ -32,10 +32,12 @@ map.on('load', () => {
                 2, '#FC9841',
                 3, '#F06832',
                 4, '#E23D28',
-                5, '#CE2029'
+                5, '#CE2029',
+                6, '#9F191F'
             ],
             'circle-opacity': 0.5,
             'circle-stroke-color': 'black'
-        }
+        },
+        'source-layer': "Basic_incidents_details_2014_-clr2re"
     });
 });
