@@ -1,15 +1,42 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Toronto Fire Services Response 2014</title>
     <link href="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.css" rel="stylesheet">
     <script src="https://api.mapbox.com/mapbox-gl-js/v3.9.4/mapbox-gl.js"></script>
     <link rel="stylesheet" href="style.css">
+    <h3>
 </head>
+
 <body>
-    <div id="my-map" class="map-container"></div> 
+    <div id='instructions' class='instructions'>
+        <h3>Toronto Fire Services Incidents 2014</h3>
+        <p>This map displays the locations of emergencies that TFS responded to in 2014. 
+            Incidents that had emergency alert levels >= 1 were inlcuded,
+            since level 0 is the initial response for any event. Hover over each point to see the number of people rescued. If you
+        click on a point, the map will display all other incidents at alert level. Click the reset button to show all the points on the map</p> 
+    </div>
+
+    <div id="my-map" class="map-container"></div>
+
+    <!-- LEGEND -->
+    <div id='alert-legend' class='legend'>
+        <h4>Emergency Alert Level</h4>
+        <h5>Level of Response from TFS</h5>
+        <div><span></span>1: Support fire response</div>
+        <div><span></span>2: 10-14 emergency vehicles</div>
+        <div><span></span>3: 15-18 emergency vehicles</div>
+        <div><span></span>4: 19-22 emergency vehicles</div>
+        <div><span></span>5: 23-28 emergency vehicles</div>
+        <div><span></span>6: 29-32 emergency vehicles</div>
+    </div>
+
+    <button id="reset-btn">Reset</button>
+
     <script src="script.js"> </script>
 </body>
+
 </html>
